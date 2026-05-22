@@ -1,1 +1,17 @@
 node_modules/
+
+# Сборка
+dist/
+build/
+
+# Переменные окружения (НИКОГДА не коммитить — там токены)
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel/
+
+# Логи и системное
+*.log
+.DS_Store
