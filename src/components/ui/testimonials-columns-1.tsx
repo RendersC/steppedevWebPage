@@ -7,6 +7,7 @@ export type Testimonial = {
   text: string
   name: string
   role: string
+  image?: string
 }
 
 // Инициалы из имени/ника (поддержка кириллицы и латиницы).
@@ -36,16 +37,24 @@ export const TestimonialsColumn = (props: {
       >
         {[...new Array(2).fill(0)].map((_, index) => (
           <React.Fragment key={index}>
-            {props.testimonials.map(({ text, name, role }, i) => (
+            {props.testimonials.map(({ text, name, role, image }, i) => (
               <div
                 className="w-full max-w-xs rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 shadow-lg shadow-black/40"
                 key={i}
               >
                 <div className="text-sm leading-relaxed text-white/80">{text}</div>
                 <div className="mt-5 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-xs font-semibold text-white">
-                    {initials(name)}
-                  </div>
+                  {image ? (
+                    <img
+                      src={image}
+                      alt={name}
+                      className="h-10 w-10 rounded-full border border-white/10 object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-xs font-semibold text-white">
+                      {initials(name)}
+                    </div>
+                  )}
                   <div className="flex flex-col">
                     <div className="font-medium leading-5 tracking-tight text-white">
                       {name}

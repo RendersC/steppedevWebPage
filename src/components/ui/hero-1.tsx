@@ -67,8 +67,8 @@ export function Hero({
       <h1
         className="animate-fade-in -translate-y-4 text-balance
         bg-gradient-to-br from-black from-30% to-black/40
-        bg-clip-text py-6 text-6xl font-semibold leading-none tracking-tighter
-        text-transparent opacity-0 sm:text-7xl md:text-8xl lg:text-9xl
+        bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter
+        text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl
         dark:from-white dark:to-white/40"
       >
         {title}
@@ -77,8 +77,8 @@ export function Hero({
       {/* Subtitle */}
       <p
         className="animate-fade-in mb-12 -translate-y-4 text-balance
-        text-xl tracking-tight text-gray-600 dark:text-gray-400
-        opacity-0 md:text-2xl mx-auto max-w-3xl"
+        text-lg tracking-tight text-gray-600 dark:text-gray-400
+        opacity-0 md:text-xl mx-auto max-w-3xl"
       >
         {subtitle}
       </p>
@@ -88,7 +88,7 @@ export function Hero({
         <div className="flex justify-center">
           <Button
             asChild
-            className="mt-[-20px] h-12 w-fit px-8 md:h-14 md:w-60 z-20 font-geist tracking-tighter text-center text-lg md:text-xl"
+            className="mt-[-20px] h-11 w-fit px-7 md:h-12 md:w-56 z-20 font-geist tracking-tighter text-center text-base md:text-lg"
           >
             <a href={ctaHref}>{ctaLabel}</a>
           </Button>

@@ -1,82 +1,49 @@
 "use client"
 
-import { Search, DraftingCompass, Code2, Rocket, type LucideIcon } from "lucide-react"
+import { Search, DraftingCompass, Code2, Rocket } from "lucide-react"
+import { BentoGrid, type BentoItem } from "@/components/ui/bento-grid"
 
-type Step = {
-  num: string
-  icon: LucideIcon
-  title: string
-  description: string
-}
-
-const steps: Step[] = [
+const steps: BentoItem[] = [
   {
-    num: "01",
-    icon: Search,
     title: "Брифинг и аудит",
+    meta: "Шаг 01",
     description:
       "Погружаемся в ваши процессы, находим узкие места и точки, где AI и автоматизация дадут максимальный эффект.",
+    icon: <Search className="h-5 w-5" strokeWidth={1.5} />,
+    status: "Старт",
+    tags: ["Анализ", "Цели"],
+    colSpan: 2,
+    hasPersistentHover: true,
   },
   {
-    num: "02",
-    icon: DraftingCompass,
     title: "Проектирование",
+    meta: "Шаг 02",
     description:
-      "Проектируем архитектуру решения: сценарии, интеграции и метрики, по которым будем измерять результат.",
+      "Проектируем архитектуру: сценарии, интеграции и метрики результата.",
+    icon: <DraftingCompass className="h-5 w-5" strokeWidth={1.5} />,
+    status: "План",
+    tags: ["Архитектура"],
   },
   {
-    num: "03",
-    icon: Code2,
     title: "Разработка и интеграция",
+    meta: "Шаг 03",
     description:
       "Собираем сценарии в n8n, подключаем CRM, чат-ботов и AI-ассистентов, тестируем на реальных данных.",
+    icon: <Code2 className="h-5 w-5" strokeWidth={1.5} />,
+    status: "Сборка",
+    tags: ["n8n", "CRM", "AI"],
+    colSpan: 2,
   },
   {
-    num: "04",
-    icon: Rocket,
     title: "Запуск и поддержка",
+    meta: "Шаг 04",
     description:
       "Запускаем в работу, обучаем команду и сопровождаем — дорабатываем и масштабируем по мере роста.",
+    icon: <Rocket className="h-5 w-5" strokeWidth={1.5} />,
+    status: "Релиз",
+    tags: ["Поддержка"],
   },
 ]
-
-function StepCard({ step, isLast }: { step: Step; isLast: boolean }) {
-  const Icon = step.icon
-  return (
-    <div className="group relative flex flex-col">
-      {/* Соединительная линия к следующему шагу (только на десктопе) */}
-      {!isLast && (
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-[calc(50%+2rem)] right-[-1.25rem] top-7 hidden h-px lg:block
-          bg-gradient-to-r from-white/20 to-white/0"
-        />
-      )}
-
-      {/* Номер + иконка */}
-      <div className="relative flex items-center gap-4">
-        <span
-          className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl
-          border border-white/10 bg-[#0a0a0a] text-white
-          transition-colors duration-300 group-hover:border-white/25 group-hover:bg-white/[0.06]"
-        >
-          <Icon className="h-6 w-6" strokeWidth={1.5} />
-        </span>
-        <span className="font-geist text-5xl font-semibold tracking-tighter text-white/10 transition-colors duration-300 group-hover:text-white/20">
-          {step.num}
-        </span>
-      </div>
-
-      {/* Текст */}
-      <h3 className="mt-6 font-geist text-lg font-semibold tracking-tight text-white md:text-xl">
-        {step.title}
-      </h3>
-      <p className="mt-2 text-sm leading-relaxed text-white/55">
-        {step.description}
-      </p>
-    </div>
-  )
-}
 
 export function Process() {
   return (
@@ -106,16 +73,14 @@ export function Process() {
             Как мы работаем
           </h2>
           <p className="mt-4 text-balance text-base text-white/55 md:text-lg">
-            Прозрачный путь от первой встречи до работающего решения —
-            без сюрпризов и затянутых сроков.
+            Прозрачный путь от первой встречи до работающего решения — без
+            сюрпризов и затянутых сроков.
           </p>
         </div>
 
-        {/* Шаги */}
-        <div className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, i) => (
-            <StepCard key={step.num} step={step} isLast={i === steps.length - 1} />
-          ))}
+        {/* Шаги в виде bento-сетки */}
+        <div className="mt-14">
+          <BentoGrid items={steps} />
         </div>
       </div>
     </section>

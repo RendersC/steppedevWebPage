@@ -7,6 +7,7 @@ import { Navbar } from "@/components/ui/navbar"
 import { Footer } from "@/components/ui/footer"
 import { Testimonials } from "@/components/ui/testimonials"
 import { Faq } from "@/components/ui/faq"
+import { Cta } from "@/components/ui/cta"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Services />
       <Process />
       <Testimonials />
+      <Cta />
       <Faq />
       <Contact />
       <Footer />

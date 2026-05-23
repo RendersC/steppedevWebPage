@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
 import { LayeredText } from "@/components/ui/layered-text"
 
 const layeredLines = [
@@ -94,16 +93,8 @@ export function Faq() {
             lines={layeredLines}
             fontSize="44px"
             fontSizeMd="30px"
-            className="!mx-0 !pb-8 !pt-24"
+            className="!mx-0 !pb-8 !pt-24 hidden md:block"
           />
-
-          <p className="max-w-sm text-balance text-base text-white/55 md:text-lg">
-            Собрали то, что спрашивают чаще всего. Не нашли ответ — напишите, и
-            мы подскажем.
-          </p>
-          <Button asChild className="mt-8 h-11 font-geist tracking-tight">
-            <a href="#contact">Задать вопрос</a>
-          </Button>
         </div>
 
         {/* Правая колонка — аккордеон */}
