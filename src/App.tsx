@@ -8,6 +8,7 @@ import { Footer } from "@/components/ui/footer"
 import { Testimonials } from "@/components/ui/testimonials"
 import { Faq } from "@/components/ui/faq"
 import { Cta } from "@/components/ui/cta"
+import { Stats } from "@/components/ui/stats"
 
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
         subtitle="n8n-автоматизации, CRM-интеграции, чат-боты и AI-ассистенты. Наше главное оружие — интеграция искусственного интеллекта во все сферы вашей работы."
         ctaLabel="Обсудить проект"
         ctaHref="#contact"
+        secondaryCtaLabel="Написать в Telegram"
+        secondaryCtaHref="https://t.me/Belyi_0071"
       />
       <TechLogos />
+      <Stats />
       <Services />
       <Process />
       <Testimonials />

@@ -14,6 +14,15 @@ const CONTACTS = {
 const fieldClass =
   "border-white/10 bg-white/[0.03] text-white placeholder:text-white/30 focus-visible:ring-white/20"
 
+// Снимаем неопределённость: клиент сразу видит, что будет после заявки.
+const nextSteps = [
+  "Отвечаем в течение рабочего дня и уточняем задачу",
+  "Короткий бриф-созвон на 20–30 минут",
+  "Присылаем предложение с ценой, сроками и планом работ",
+]
+
+const trustChips = ["Бесплатная консультация", "Фиксируем цену до старта", "NDA по запросу"]
+
 export function Contact() {
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -112,6 +121,28 @@ export function Contact() {
               <ArrowUpRight className="ml-auto h-4 w-4 text-white/30 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white/60" />
             </a>
           </div>
+
+          {/* Что будет после заявки */}
+          <div className="mt-10">
+            <p className="text-xs uppercase tracking-widest text-white/40">
+              Что дальше
+            </p>
+            <ol className="mt-4 flex flex-col gap-3">
+              {nextSteps.map((step, i) => (
+                <li key={step} className="flex items-center gap-3.5">
+                  <span
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full
+                    border border-white/10 bg-white/[0.04] font-geist text-xs font-semibold text-white/70"
+                  >
+                    0{i + 1}
+                  </span>
+                  <span className="text-sm leading-relaxed text-white/60">
+                    {step}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
 
         {/* Правая колонка — форма */}
@@ -187,6 +218,17 @@ export function Contact() {
               {error && (
                 <p className="text-center text-sm text-red-400">{error}</p>
               )}
+
+              <div className="flex flex-wrap justify-center gap-2">
+                {trustChips.map((chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-white/50"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </div>
 
               <p className="text-center text-xs text-white/35">
                 Нажимая кнопку, вы соглашаетесь на обработку персональных данных.

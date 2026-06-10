@@ -1,56 +1,70 @@
 "use client"
 
-import { ArrowUpRight } from "lucide-react"
+import {
+  Globe,
+  Scale,
+  Calculator,
+  Bitcoin,
+  Sparkles,
+  Megaphone,
+  Factory,
+  Terminal,
+} from "lucide-react"
 import {
   TestimonialsColumn,
   type Testimonial,
 } from "@/components/ui/testimonials-columns-1"
 
-// Реальные отзывы клиентов SteppeDev (Kwork).
+// Реальные отзывы клиентов. Подпись — по типу бизнеса, без указания площадки.
 const testimonials: Testimonial[] = [
   {
     text: "Быстро и качественно выполнен заказ. Будем обращаться повторно.",
-    name: "VR1011",
+    name: "Онлайн-сервис",
     role: "n8n-автоматизация",
-    image: "/clients/vr1011.jpg",
+    icon: Globe,
   },
   {
     text: "Обратилась с вопросом создания сайта для юриста. Сделали всё быстро и качественно: добавили всё необходимое, подключили ИИ-бота, настроили хостинг, домен и чаты в мессенджерах. Отвечали быстро и даже бесплатно приняли мои правки. Спасибо за работу, обязательно ещё обращусь. Вы супер!",
-    name: "sv-lawyer",
-    role: "Сайт для юриста + ИИ-бот",
-    image: "/clients/sv-lawyer.jpg",
+    name: "Юридическая практика",
+    role: "Сайт + ИИ-бот",
+    icon: Scale,
   },
   {
     text: "Благодарю за выполненную работу! Заказ по вёрстке выполнен раньше срока, все правки учли и моментально исправили. Ребята профи, всем рекомендую!",
-    name: "m-uchet",
+    name: "Бухгалтерия и учёт",
     role: "Вёрстка сайта",
+    icon: Calculator,
   },
   {
     text: "Задача была выполнена сверхоперативно! Очень рекомендую данного исполнителя. Сам буду обращаться ещё.",
-    name: "pulsar197",
-    role: "Скрипт",
-    image: "/clients/pulsar197.jpg",
+    name: "Крипто-финанс компания",
+    role: "Автоматизация · скрипт",
+    icon: Bitcoin,
   },
   {
     text: "Отличная работа, настоящие профессионалы. Telegram-бот сделан качественно и по ТЗ. Порадовала инициатива по оптимизации процессов. Управление ролями и система квот реализованы безупречно. Проект сдан в срок, код передан в репозитории с документацией. Очень доволен результатом!",
-    name: "kuzhbalov96",
-    role: "Telegram-бот · Aiogram + PostgreSQL",
+    name: "Бьюти-сфера · ногтевой сервис",
+    role: "AI-анализ ногтей + CRM-бот",
+    icon: Sparkles,
     image: "/clients/kuzhbalov96.jpg",
   },
   {
     text: "Ребята выполнили работу в кратчайшие сроки, спасибо большое! Отвечают очень быстро, с ними просто коммуницировать и работа идёт быстро. Советую!",
-    name: "vladimirkotaev8",
-    role: "Скрипт",
+    name: "Digital-агентство",
+    role: "Автоматизация · скрипт",
+    icon: Megaphone,
   },
   {
     text: "Осталась очень довольна работой — сайт хороший, приятный глазу. Сделали шустро, чётко и без проблем, понимают с полуслова. Буду ли обращаться снова? ОДНОЗНАЧНО ДА!",
-    name: "pkdcfwvn48",
+    name: "Производственная компания",
     role: "Корпоративный сайт",
+    icon: Factory,
   },
   {
     text: "Делал правку скрипта на Python — в отличие от многих других сделал всё быстро и качественно. Рекомендую.",
-    name: "art36",
-    role: "Python-скрипт",
+    name: "Разработчик",
+    role: "Доработка Python-скрипта",
+    icon: Terminal,
     image: "/clients/art36.jpg",
   },
 ]
@@ -78,19 +92,9 @@ export function Testimonials() {
             Что говорят клиенты
           </h2>
           <p className="mt-4 text-balance text-base text-white/55 md:text-lg">
-            8 положительных отзывов и ни одного отрицательного. Реальная история
-            работ на Kwork.
+            8 положительных отзывов и ни одного отрицательного — реальные задачи
+            бизнеса, доведённые до результата.
           </p>
-          <a
-            href="https://kwork.ru/user/steppedev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-6 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.02] px-4 py-2
-            text-sm text-white/70 transition-colors hover:border-white/25 hover:bg-white/[0.05] hover:text-white"
-          >
-            Смотреть отзывы на Kwork
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
         </div>
 
         {/* Колонки с автопрокруткой */}

@@ -1,16 +1,9 @@
-import {
-  Github,
-  Instagram,
-  Phone,
-  MessageCircle,
-  ExternalLink,
-} from "lucide-react"
+import { Github, Instagram, Phone, MessageCircle } from "lucide-react"
 
 const TELEGRAM = "https://t.me/Belyi_0071"
 const WHATSAPP = "https://wa.me/77055205316"
 const GITHUB = "https://github.com/RendersC"
 const INSTAGRAM = "https://www.instagram.com/nura_a07_?igsh=emt1c3Nzc3c0c2M1"
-const KWORK = "https://kwork.ru/user/steppedev"
 
 const socials = [
   { icon: MessageCircle, href: TELEGRAM, label: "Telegram" },
@@ -151,17 +144,6 @@ export function Footer() {
                 >
                   <Github className="mr-2 h-5 w-5 text-gray-400" />
                   github.com/RendersC
-                </a>
-              </li>
-              <li>
-                <a
-                  href={KWORK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center text-gray-600 transition-colors duration-300 hover:text-black"
-                >
-                  <ExternalLink className="mr-2 h-5 w-5 text-gray-400" />
-                  kwork.ru/user/steppedev
                 </a>
               </li>
             </ul>

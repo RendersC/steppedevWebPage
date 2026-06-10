@@ -146,6 +146,23 @@
   }
 }
 
+/* Плавный переход по якорям из навбара.
+   scroll-margin-top компенсирует фиксированный хедер (h-16 + воздух),
+   чтобы заголовок секции не прятался под ним. */
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 * {
   border-color: hsl(var(--border));
 }

@@ -2,18 +2,14 @@
 
 import React from "react"
 import { motion } from "motion/react"
+import type { LucideIcon } from "lucide-react"
 
 export type Testimonial = {
   text: string
-  name: string
-  role: string
-  image?: string
-}
-
-// Инициалы из имени/ника (поддержка кириллицы и латиницы).
-function initials(name: string) {
-  const letters = name.replace(/[^A-Za-zА-Яа-яЁё]/g, "")
-  return (letters || name).slice(0, 2).toUpperCase()
+  name: string // тип бизнеса клиента
+  role: string // что делали в проекте
+  icon?: LucideIcon
+  image?: string // реальное фото клиента (приоритетнее иконки)
 }
 
 export const TestimonialsColumn = (props: {
@@ -37,7 +33,7 @@ export const TestimonialsColumn = (props: {
       >
         {[...new Array(2).fill(0)].map((_, index) => (
           <React.Fragment key={index}>
-            {props.testimonials.map(({ text, name, role, image }, i) => (
+            {props.testimonials.map(({ text, name, role, icon: Icon, image }, i) => (
               <div
                 className="w-full max-w-xs rounded-3xl border border-white/10 bg-[#0a0a0a] p-8 shadow-lg shadow-black/40"
                 key={i}
@@ -48,12 +44,13 @@ export const TestimonialsColumn = (props: {
                     <img
                       src={image}
                       alt={name}
+                      loading="lazy"
                       className="h-10 w-10 rounded-full border border-white/10 object-cover"
                     />
                   ) : (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-xs font-semibold text-white">
-                      {initials(name)}
-                    </div>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white">
+                      {Icon ? <Icon className="h-5 w-5" strokeWidth={1.5} /> : null}
+                    </span>
                   )}
                   <div className="flex flex-col">
                     <div className="font-medium leading-5 tracking-tight text-white">
