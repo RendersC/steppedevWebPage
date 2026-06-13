@@ -155,7 +155,15 @@ export function Footer() {
             © {new Date().getFullYear()} SteppeDev. Все права защищены.
           </p>
           <p className="mt-2 text-sm text-gray-400">
-            Основатель и CEO — Adildabek Nurassyl
+            Основатель и CEO —{" "}
+            <a
+              href="https://www.linkedin.com/in/nurik-adildabek-b63301363"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 transition-colors hover:text-black hover:underline"
+            >
+              Adildabek Nurassyl
+            </a>
           </p>
         </div>
       </div>
