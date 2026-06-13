@@ -6,41 +6,75 @@
     <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
+
     <title>SteppeDev — внедряем AI и автоматизацию в бизнес | n8n, CRM, чат-боты</title>
     <meta
       name="description"
-      content="Студия AI-автоматизации SteppeDev: n8n-сценарии, CRM-интеграции, чат-боты и AI-ассистенты. До 80% рутины — на автоматику. Рейтинг 5.0 на Kwork, ответ в течение рабочего дня."
+      content="Студия AI-автоматизации SteppeDev: n8n-сценарии, CRM-интеграции, чат-боты и AI-ассистенты. До 80% рутины — на автоматику. Рейтинг 5.0, ответ в течение рабочего дня."
     />
     <meta
       name="keywords"
-      content="автоматизация бизнеса, n8n, AI-интеграция, CRM автоматизация, чат-бот для бизнеса, AI-ассистент, SteppeDev"
+      content="автоматизация бизнеса, n8n, разработка чат-ботов, AI-интеграция, внедрение искусственного интеллекта, CRM автоматизация, amoCRM, Bitrix24, Telegram-бот, AI-ассистент, автоматизация процессов, SteppeDev"
+    />
+    <meta name="author" content="SteppeDev" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
-    <!-- Open Graph / Twitter. og:image и og:url должны быть АБСОЛЮТНЫМИ -
-         подставь продакшен-домен вместо относительных путей после деплоя. -->
+    <!-- Канонический адрес и язык -->
+    <link rel="canonical" href="https://steppedev.site/" />
+    <link rel="alternate" hreflang="ru" href="https://steppedev.site/" />
+    <link rel="alternate" hreflang="x-default" href="https://steppedev.site/" />
+
+    <!-- Подтверждение прав в вебмастерах.
+         Google подтверждается через DNS (TXT-запись в Namecheap). -->
+    <meta name="yandex-verification" content="480cf1c9ca46c503" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content="SteppeDev" />
+    <meta property="og:url" content="https://steppedev.site/" />
     <meta property="og:title" content="SteppeDev — внедряем AI и автоматизацию в бизнес" />
     <meta
       property="og:description"
-      content="n8n-автоматизации, CRM-интеграции, чат-боты и AI-ассистенты. Рейтинг 5.0 на Kwork, 100% положительных отзывов."
+      content="n8n-автоматизации, CRM-интеграции, чат-боты и AI-ассистенты. Рейтинг 5.0, 100% положительных отзывов."
     />
-    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:image" content="https://steppedev.site/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SteppeDev — внедряем AI в ваш бизнес" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SteppeDev — внедряем AI и автоматизацию в бизнес" />
     <meta
       name="twitter:description"
-      content="n8n-автоматизации, CRM-интеграции, чат-боты и AI-ассистенты. Рейтинг 5.0 на Kwork, 100% положительных отзывов."
+      content="n8n-автоматизации, CRM-интеграции, чат-боты и AI-ассистенты. Рейтинг 5.0, 100% положительных отзывов."
     />
-    <meta name="twitter:image" content="/og.jpg" />
+    <meta name="twitter:image" content="https://steppedev.site/og.jpg" />
 
+    <!-- Разметка организации -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "SteppeDev",
+        "url": "https://steppedev.site/",
+        "image": "https://steppedev.site/og.jpg",
+        "logo": "https://steppedev.site/logo-full.png",
         "description": "Студия AI-автоматизации: n8n-сценарии, CRM-интеграции, чат-боты и AI-ассистенты для бизнеса.",
+        "telephone": "+7-705-520-5316",
+        "areaServed": ["RU", "KZ"],
+        "knowsAbout": [
+          "n8n",
+          "автоматизация бизнеса",
+          "интеграция искусственного интеллекта",
+          "CRM-автоматизация",
+          "чат-боты",
+          "AI-ассистенты"
+        ],
         "sameAs": [
           "https://github.com/RendersC",
           "https://t.me/Belyi_0071"
@@ -48,8 +82,83 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "reviewCount": "8"
+          "reviewCount": "8",
+          "bestRating": "5"
         }
+      }
+    </script>
+
+    <!-- Разметка частых вопросов (FAQ) для расширенных сниппетов в выдаче -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Что такое n8n и зачем нужна автоматизация?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "n8n — это платформа для соединения сервисов в единые сценарии без рутинного ручного труда. Заявки, уведомления, выгрузки данных и обработка AI запускаются автоматически. В итоге команда тратит время на задачи, а не на однотипные операции."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько стоит проект и от чего зависит цена?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Стоимость зависит от объёма: количества сценариев, интеграций и сложности AI-логики. После короткого брифинга мы фиксируем объём и называем точную цену — без скрытых платежей. Небольшие задачи можно сделать пакетно."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько времени занимает разработка?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Простой бот или сценарий — от нескольких дней. Комплексная интеграция с CRM и AI-ассистентом — от 1–2 недель. Точные сроки фиксируем на этапе проектирования и часто сдаём раньше срока."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "С какими CRM и сервисами вы интегрируетесь?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Практически с любыми, у которых есть API или вебхуки: amoCRM, Bitrix24, Google-сервисы, Telegram, базы данных (PostgreSQL и др.), платёжные системы и сотни других через n8n, Make и Zapier."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Безопасны ли мои данные при внедрении AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Доступы храним по принципу минимальных прав, ключи — в защищённых хранилищах. По запросу разворачиваем решение на вашей инфраструктуре, чтобы данные не покидали ваш контур."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли доработать существующую систему, а не делать с нуля?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Конечно. Часто мы подключаемся к уже работающим сайтам, CRM и ботам: добавляем AI, оптимизируем сценарии и закрываем узкие места, не переписывая всё заново."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Будет ли поддержка после запуска?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. После сдачи передаём код и документацию, обучаем команду и сопровождаем решение: дорабатываем, масштабируем и помогаем по мере роста."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как начать работу?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Напишите нам в Telegram или WhatsApp, либо оставьте заявку в форме ниже. Проведём короткий брифинг, разберём задачу и предложим решение со сроками и ценой."
+            }
+          }
+        ]
       }
     </script>
   </head>
