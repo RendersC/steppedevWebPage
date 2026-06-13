@@ -154,6 +154,9 @@ export function Footer() {
           <p className="text-sm font-medium text-gray-500">
             © {new Date().getFullYear()} SteppeDev. Все права защищены.
           </p>
+          <p className="mt-2 text-sm text-gray-400">
+            Основатель и CEO — Adildabek Nurassyl
+          </p>
         </div>
       </div>
     </footer>
